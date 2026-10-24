@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "packageRules": [
+    {
+      "description": "The compile-check image must match the ESPHome version the production Builder runs; propose, never automerge.",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["ghcr.io/esphome/esphome"],
+      "automerge": false
+    }
+  ]
+}
